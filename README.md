@@ -1,6 +1,6 @@
 ## Cactus
 
-A hugo theme for personal blog. Fork from hexo theme [cactus](https://github.com/probberechts/hexo-theme-cactus) created by @probberechts.
+A hugo theme for personal blog. Fork from [hugo-theme-cactus](https://github.com/monkeyWzr/hugo-theme-cactus) created by @monkeyWzr.
 
 [Live demo on github pages](https://www.takuzen.me/hugo-theme-cactus/).
 
@@ -8,12 +8,14 @@ Some works are still in progress. See [TODOS](#todos) below.
 
 ## Install
 
-1. clone cactus to your hugo site's `themes` folder.
-```
-git clone https://github.com/monkeyWzr/hugo-theme-cactus.git themes/cactus
+1. Clone cactus to your hugo site's `themes` folder.
+
+```sh
+git clone https://github.com/johnshumon/theme-cactus.git themes/cactus
 ```
 
-2. change your theme to cactus in your site config
+2. Change your theme to cactus in your site config
+
 ```toml
 # config.toml
 
@@ -21,12 +23,14 @@ theme = "cactus"
 ```
 
 3. config your site. See [Config] or a [complete config sample](exampleSite/config.toml)
+
 4. test your site
-```
+
+```sh
 hugo server
 ```
 
-5. publish your site in your prefered way. See hugo's doc: [Hosting & Deployment](https://gohugo.io/hosting-and-deployment/)
+5. Publish your site in your prefered way. See hugo's doc: [Hosting & Deployment](https://gohugo.io/hosting-and-deployment/)
 
 ## Config
 
@@ -76,6 +80,7 @@ weight = 4
 ### Homepage settings
 
 * description: description will be displayed in the homepage. Markdown syntax is supported in the description string.
+
 ```toml
 [params]
 
@@ -103,6 +108,7 @@ weight = 4
   showAllPostsOnHomePage = false
   postsOnHomePage = 5
 ```
+
 * show all posts
 
 ```toml
@@ -112,7 +118,7 @@ weight = 4
 ```
 
 * show tagsoverview (default) or not
-* 
+
 ```toml
 [params]
   tagsOverview = true
@@ -141,6 +147,7 @@ Create your projects data file `data/projects.yaml|toml|json`. Hugo support yaml
 for former hexo cactus users: please assign your json array to a `list` key.
 
 for example, `data/projects.json`:
+
 ```json
 {
    "list": [
@@ -189,6 +196,7 @@ copyright = "Zeran Wu" # cactus theme will use site title if copyright is not se
 ### Comments
 
 Comments is disabled by default. Enable comments in your `.Site.Params`.
+
 ```toml
 [params]
   [params.comments]
@@ -197,6 +205,7 @@ Comments is disabled by default. Enable comments in your `.Site.Params`.
 ```
 
 You can also enable/disable comments per post. in your posts' front matter, add:
+
 ```yaml
 comments: true
 ```
@@ -207,7 +216,7 @@ The default engine is disqus. **By now only disqus is supported in cactus.** I w
 
 Before using disqus, you need to register and get your [disqus shortname](https://help.disqus.com/en/articles/1717111-what-s-a-shortname). Assign your shortname in `.Site.disqusShortname`, or cactus will use `.Site.Title` by default.
 
-```
+```sh
 disqusShortname = "wzr" # cactus will use site title if not set
 ```
 
@@ -236,11 +245,13 @@ default config:
 Cactus uses hugo's bulit in analytics templates. Check [hugo's documents](https://gohugo.io/templates/internal#google-analytics) for details.
 
 Set you tracking id in your site config.
+
 ```toml
 googleAnalytics = "UA-XXXXXXXX-XX" # or G-XXXXXXXX if you are using Google Analytics v4 (gtag.js)
 ```
 
 If you are using Google Analytics v3 (analytics.js), you can switch to asynchronous tracking by set `params.googleAnalyticsAsync` to `true`.
+
 ```toml
 [params]
 googleAnalyticsAsync = true # not required
@@ -262,19 +273,22 @@ Please also check [Configure RSS](https://gohugo.io/templates/rss/#configure-rss
 ### Mathjax
 
 Cactus supports mathjax. Just add `mathjax` option in your site config:
+
 ```toml
 [params]
   mathjax = true  # not required
 ```
 
 You can also enable/disable mathjax per post. In your posts' front matter, add:
+
 ```yaml
 mathjax: true # or false
 ```
 
 The site config will be ignored when `mathjax` option exists in front matter.
 
-### Archive 
+### Archive
+
 Pagination on posts archive can be disabled to show all posts in chronological order
 
 ```toml
@@ -284,15 +298,15 @@ Pagination on posts archive can be disabled to show all posts in chronological o
 
 ## TODOS
 
-- [ ] More comments engines
-- [x] RSS
-- [ ] I18n
-- [x] Analytics
-- [ ] Local Search
-- [ ] toc template
-- [ ] Customizable copyright year
-- [ ] gallery
-- [ ] expose [mathjax configuration](https://docs.mathjax.org/en/latest/web/configuration.html#web-configuration) 
+* [ ] More comments engines
+* [x] RSS
+* [ ] I18n
+* [x] Analytics
+* [ ] Local Search
+* [ ] toc template
+* [ ] Customizable copyright year
+* [ ] gallery
+* [ ] expose [mathjax configuration](https://docs.mathjax.org/en/latest/web/configuration.html#web-configuration) 
 
 ## License
 
